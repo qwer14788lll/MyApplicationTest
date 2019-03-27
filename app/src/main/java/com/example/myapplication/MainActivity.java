@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             mButtonNext.setEnabled(false);
         }
         Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+
     }
 
     private void updateButtonNext(int imageID) {

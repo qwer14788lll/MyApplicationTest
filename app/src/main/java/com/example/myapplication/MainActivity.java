@@ -113,25 +113,27 @@ public class MainActivity extends AppCompatActivity {
         mButtonAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String temp;
-                if(mQuestions[mQuestionIndex].isAnswer())//解析答案数据
-                {
-                    temp="正确";
-                }
-                else
-                {
-                    temp="错误";
-                }
-                Intent intent=new Intent(MainActivity.this,AnswerActivity.class);//显式调用
-                intent.putExtra("msg",temp);//将数据附加到intent中
+//                String temp;
+//                if(mQuestions[mQuestionIndex].isAnswer())//解析答案数据
+//                {
+//                    temp="正确";
+//                }
+//                else
+//                {
+//                    temp="错误";
+//                }
+//                Intent intent=new Intent(MainActivity.this,AnswerActivity.class);//显式调用
+//                intent.putExtra("msg",temp);//将数据附加到intent中
+//                startActivityForResult(intent,REQUEST_CODE_ANSWER);//需要返回值的启动activity方法
+
 //                if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED)//PackageManager.PERMISSION_GRANTED=0
 //                {
 //                    ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},1);//第二个参数，申请哪些权限，第三个参数，请求代码
 //                }
 //                Intent intent=new Intent(Intent.ACTION_CALL);
 //                intent.setData(Uri.parse("tel:17520439994"));
-                //startActivity(intent);
-                startActivityForResult(intent,REQUEST_CODE_ANSWER);//需要返回值的启动activity方法
+                Intent intent=new Intent(MainActivity.this,FABActivity.class);//显式调用
+                startActivity(intent);
             }
         });
     }
